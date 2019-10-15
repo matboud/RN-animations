@@ -18,6 +18,7 @@ import {
 } from 'react-native';
 import Opacity from './src/Opacity';
 import TranslatePosition from './src/TranslatePosition';
+import Scale from './src/Scale';
 
 export default class App extends Component {
   constructor(props) {
@@ -39,10 +40,17 @@ export default class App extends Component {
           </View>
 
           <Text style={styles.title}>
-            1: <Text style={styles.souTitle}>TranslatePosition</Text>.
+            2: <Text style={styles.souTitle}>TranslatePosition</Text>.
           </Text>
           <View style={[styles.lesson, {height: screenHeight / 3}]}>
             <TranslatePosition />
+          </View>
+
+          <Text style={styles.title}>
+            3: <Text style={styles.souTitle}>Scale</Text>.
+          </Text>
+          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+            <Scale />
           </View>
         </ScrollView>
       </SafeAreaView>
