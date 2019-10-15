@@ -19,6 +19,7 @@ import {
 import Opacity from './src/Opacity';
 import TranslatePosition from './src/TranslatePosition';
 import Scale from './src/Scale';
+import WidthHeightValues from './src/WidthHeightValues';
 
 export default class App extends Component {
   constructor(props) {
@@ -52,6 +53,13 @@ export default class App extends Component {
           <View style={[styles.lesson, {height: screenHeight / 3}]}>
             <Scale />
           </View>
+
+          <Text style={styles.title}>
+            4: <Text style={styles.souTitle}>width / height values</Text>.
+          </Text>
+          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+            <WidthHeightValues />
+          </View>
         </ScrollView>
       </SafeAreaView>
     );
@@ -61,7 +69,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   lesson: {
     borderWidth: 0.5,
-    borderColor: '#2c3e50',
+    borderColor: '#95a5a6',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
