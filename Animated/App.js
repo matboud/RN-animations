@@ -20,6 +20,7 @@ import Opacity from './src/Opacity';
 import TranslatePosition from './src/TranslatePosition';
 import Scale from './src/Scale';
 import WidthHeightValues from './src/WidthHeightValues';
+import HeaderPosition from './src/HeaderPosition';
 
 export default class App extends Component {
   constructor(props) {
@@ -36,29 +37,36 @@ export default class App extends Component {
           <Text style={styles.title}>
             1: <Text style={styles.souTitle}>Opacity blink</Text>.
           </Text>
-          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <Opacity />
           </View>
 
           <Text style={styles.title}>
             2: <Text style={styles.souTitle}>TranslatePosition</Text>.
           </Text>
-          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <TranslatePosition />
           </View>
 
           <Text style={styles.title}>
             3: <Text style={styles.souTitle}>Scale</Text>.
           </Text>
-          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <Scale />
           </View>
 
           <Text style={styles.title}>
             4: <Text style={styles.souTitle}>width / height values</Text>.
           </Text>
-          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <WidthHeightValues />
+          </View>
+
+          <Text style={styles.title}>
+            5: <Text style={styles.souTitle}>Header position</Text>.
+          </Text>
+          <View style={[styles.lesson, {height: screenHeight / 3}]}>
+            <HeaderPosition />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -67,11 +75,16 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  lesson: {
+  lessonCentered: {
     borderWidth: 0.5,
     borderColor: '#95a5a6',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  lesson: {
+    borderWidth: 0.5,
+    borderColor: '#95a5a6',
     backgroundColor: 'white',
   },
   title: {
