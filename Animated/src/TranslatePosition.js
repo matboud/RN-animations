@@ -17,14 +17,19 @@ export default class TranslatePosition extends Component {
   startAnimation = () => {
     Animated.timing(this.state.animated, {
       toValue: 100,
-      duration: 1300,
-    }).start(()=>{
+      duration: 500,
+    }).start(() => {
       Animated.timing(this.state.animated, {
-        toValue: 0,
-        duration: 600
-      }).start()
-    })
-  }
+        toValue: -100,
+        duration: 900,
+      }).start(() => {
+        Animated.timing(this.state.animated, {
+          toValue: 0,
+          duration: 700,
+        }).start();
+      });
+    });
+  };
 
   render() {
     const animatedStyle = {

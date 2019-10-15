@@ -18,11 +18,11 @@ export default class TranslatePosition extends Component {
     Animated.timing(this.state.animation, {
       toValue: 2,
       duration: 700,
-    }).start(()=>{
-        Animated.timing(this.state.animation, {
-            toValue: 1,
-            duration:700
-        }).start()
+    }).start(() => {
+      Animated.timing(this.state.animation, {
+        toValue: 1,
+        duration: 700,
+      }).start();
     });
   };
 
@@ -44,7 +44,7 @@ export default class TranslatePosition extends Component {
 
 const styles = StyleSheet.create({
   box: {
-    backgroundColor: 'aqua',
+    backgroundColor: '#f1c40f',
     width: 50,
     padding: 50,
   },
