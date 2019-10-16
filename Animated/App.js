@@ -21,6 +21,7 @@ import TranslatePosition from './src/TranslatePosition';
 import Scale from './src/Scale';
 import WidthHeightValues from './src/WidthHeightValues';
 import HeaderPosition from './src/HeaderPosition';
+import Colors from './src/Colors';
 
 export default class App extends Component {
   constructor(props) {
@@ -67,6 +68,13 @@ export default class App extends Component {
           </Text>
           <View style={[styles.lesson, {height: screenHeight / 3}]}>
             <HeaderPosition />
+          </View>
+
+          <Text style={styles.title}>
+            6: <Text style={styles.souTitle}>colors</Text>.
+          </Text>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
+            <Colors />
           </View>
         </ScrollView>
       </SafeAreaView>
