@@ -22,6 +22,7 @@ import Scale from './src/Scale';
 import WidthHeightValues from './src/WidthHeightValues';
 import HeaderPosition from './src/HeaderPosition';
 import Colors from './src/Colors';
+import Rotation from './src/Rotation';
 
 export default class App extends Component {
   constructor(props) {
@@ -75,6 +76,13 @@ export default class App extends Component {
           </Text>
           <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <Colors />
+          </View>
+
+          <Text style={styles.title}>
+            7: <Text style={styles.souTitle}> Rotation</Text>.
+          </Text>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
+            <Rotation />
           </View>
         </ScrollView>
       </SafeAreaView>
