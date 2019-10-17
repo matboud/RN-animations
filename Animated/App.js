@@ -23,6 +23,7 @@ import WidthHeightValues from './src/WidthHeightValues';
 import HeaderPosition from './src/HeaderPosition';
 import Colors from './src/Colors';
 import Rotation from './src/Rotation';
+import PercentageWH from './src/PercentageWH';
 
 export default class App extends Component {
   constructor(props) {
@@ -83,6 +84,13 @@ export default class App extends Component {
           </Text>
           <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <Rotation />
+          </View>
+
+          <Text style={styles.title}>
+            8: <Text style={styles.souTitle}> Percentage w/h</Text>.
+          </Text>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
+            <PercentageWH />
           </View>
         </ScrollView>
       </SafeAreaView>
