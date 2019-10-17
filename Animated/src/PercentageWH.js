@@ -4,6 +4,7 @@ import {
   View,
   TouchableWithoutFeedback,
   Animated,
+  Easing
 } from 'react-native';
 
 export default class PercentageWH extends Component {
@@ -17,23 +18,27 @@ export default class PercentageWH extends Component {
   startAnimation = () => {
     Animated.timing(this.state.animation, {
       toValue: 1,
-      timing: 500,
+      timing: 100,
+    //   easing: Easing.back(2),
+    //   easing: Easing.bounce,
+    //   easing: Easing.elastic(3),
+      easing: Easing.bezier(.06, 1,.86,.23),
     }).start(() => {
       Animated.timing(this.state.animation, {
         toValue: 0,
-        timing: 500,
+        timing: 100,
       }).start();
     });
   };
   render() {
     const widthInterpolate = this.state.animation.interpolate({
       inputRange: [0, 1],
-      outputRange: ['25%', '60%'],
+      outputRange: ['25%', '40%'],
     });
 
     const heightInterpolate = this.state.animation.interpolate({
       inputRange: [0, 1],
-      outputRange: ['25%', '60%'],
+      outputRange: ['25%', '40%'],
     });
 
     const animatedStyles = {
