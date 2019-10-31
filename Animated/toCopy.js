@@ -5,7 +5,7 @@ import {
   TouchableWithoutFeedback,
   Animated,
   Text,
-  Easing
+  Easing,
 } from 'react-native';
 
 export default class MyEasing extends Component {
@@ -15,21 +15,9 @@ export default class MyEasing extends Component {
       animation: new Animated.Value(0),
     };
   }
-  startAnimation = () => {
-    Animated.timing(this.state.animation, {
-      toValue: 220,
-      duration: 1000,
-      easing: Easing.bounce
-    }).start();
-  };
+  startAnimation = () => {};
   render() {
-    const AnimatedStyle = {
-      transform: [
-        {
-          translateY: this.state.animation,
-        },
-      ],
-    };
+    const AnimatedStyle = {};
     return (
       <TouchableWithoutFeedback onPress={this.startAnimation}>
         <Animated.View style={[styles.box, AnimatedStyle]}></Animated.View>

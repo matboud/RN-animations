@@ -25,6 +25,7 @@ import Colors from './src/Colors';
 import Rotation from './src/Rotation';
 import PercentageWH from './src/PercentageWH';
 import Easing from './src/Easing';
+import Spring from './src/Spring';
 
 export default class App extends Component {
   constructor(props) {
@@ -99,6 +100,13 @@ export default class App extends Component {
           </Text>
           <View style={[styles.lesson, {height: screenHeight / 3}]}>
             <Easing />
+          </View>
+
+          <Text style={styles.title}>
+            10: <Text style={styles.souTitle}>Spring</Text>.
+          </Text>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
+            <Spring />
           </View>
         </ScrollView>
       </SafeAreaView>

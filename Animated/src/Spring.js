@@ -5,28 +5,33 @@ import {
   TouchableWithoutFeedback,
   Animated,
   Text,
-  Easing
+  Easing,
 } from 'react-native';
 
-export default class MyEasing extends Component {
+export default class Spring extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animation: new Animated.Value(0),
+      animation: new Animated.Value(1),
     };
   }
   startAnimation = () => {
-    Animated.timing(this.state.animation, {
-      toValue: 220,
-      duration: 1000,
-      easing: Easing.bounce
-    }).start();
+    Animated.spring(this.state.animation, {
+      toValue: 2,
+      friction: 2,
+      tension: 60,
+    }).start(() => {
+      Animated.timing(this.state.animation, {
+        toValue: 1,
+        duration: 100,
+      }).start();
+    });
   };
   render() {
     const AnimatedStyle = {
       transform: [
         {
-          translateY: this.state.animation,
+          scale: this.state.animation,
         },
       ],
     };
