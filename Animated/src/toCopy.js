@@ -8,7 +8,7 @@ import {
   Easing,
 } from 'react-native';
 
-export default class MyEasing extends Component {
+export default class toCopy extends Component {
   constructor(props) {
     super(props);
     this.state = {

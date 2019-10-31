@@ -26,6 +26,7 @@ import Rotation from './src/Rotation';
 import PercentageWH from './src/PercentageWH';
 import Easing from './src/Easing';
 import Spring from './src/Spring';
+import Event from './src/Event';
 
 export default class App extends Component {
   constructor(props) {
@@ -107,6 +108,13 @@ export default class App extends Component {
           </Text>
           <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
             <Spring />
+          </View>
+          
+          <Text style={styles.title}>
+            11: <Text style={styles.souTitle}>Event</Text>.
+          </Text>
+          <View style={[styles.lessonCentered, {height: screenHeight / 3}]}>
+            <Event />
           </View>
         </ScrollView>
       </SafeAreaView>
